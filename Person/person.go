@@ -1,4 +1,4 @@
-package person
+package Person
 
 import (
 	"fmt"

@@ -1,4 +1,4 @@
-package slice
+package GoSlice
 
 import (
 	"fmt"
@@ -14,6 +14,14 @@ var StrSlice1 []string
 
 var StrSlice2 = make([]string, 3)
 //var StrSlice2 = make([]string, 0)
+
+/**
+ * Golang中任何类型使用interface{}表示，类似于Java中的顶级父类Object
+ */
+
+var AnySlice []interface{}
+
+var AS = make([]interface{}, 0)
 
 func PrintLenAndCap(slice []string) {
 	fmt.Println(len(slice), cap(slice))
@@ -55,5 +63,11 @@ func Test() {
 	StrSlice2 = append(StrSlice2, "123")
 	PrintLenAndCap(StrSlice2)
 	fmt.Println(ToString(StrSlice2))
+}
+
+func TestAnySlice() {
+	AnySlice = append(AnySlice, "aaa")
+	AnySlice = append(AnySlice, 123)
+	AnySlice = append(AnySlice, []int{1, 5, 6, 7, 9})
 }
 

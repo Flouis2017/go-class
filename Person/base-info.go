@@ -1,4 +1,4 @@
-package person
+package Person
 
 var Name = "Flouis"
 var Age = 27
