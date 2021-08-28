@@ -7,13 +7,16 @@ import (
 
 /**
  * Golang中的切片等同于Java的列表，即不定长数组
- * 切片可以通过数组初始化，也可以通过如下两种方式初始化
+ * 切片可以通过数组初始化，也可以通过如下三种方式初始化
  */
 
 var StrSlice1 []string
 
-var StrSlice2 = make([]string, 3)
 //var StrSlice2 = make([]string, 0)
+
+var StrSlice2 = make([]string, 3)
+
+var StrSlice3 = []string{"create", "retrieve", "update", "delete"}
 
 /**
  * Golang中任何类型使用interface{}表示，类似于Java中的顶级父类Object

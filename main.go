@@ -17,13 +17,13 @@ func main() {
 	fmt.Println(Person.ToString())
 	Person.ForPrintNum()*/
 
-	/*GoArray.Run()
-	var a = GoArray.Zoo[2:]
-	fmt.Println(reflect.TypeOf(a))
-	fmt.Println(a)*/
+	/*var a = GoArray.Zoo[2:]
+	fmt.Println(reflect.TypeOf(a), ">>", a)
+	fmt.Println(reflect.TypeOf(GoArray.Zoo), ">>", GoArray.Zoo)
+	GoArray.Run()*/
 
-	/*GoSlice.Test()
-	fmt.Println(reflect.TypeOf(GoSlice.StrSlice1), reflect.TypeOf(GoSlice.StrSlice2))
+	//GoSlice.Test()
+	/*fmt.Println(reflect.TypeOf(GoSlice.StrSlice1), reflect.TypeOf(GoSlice.StrSlice2), reflect.TypeOf(GoSlice.StrSlice3))
 	fmt.Println("GoSlice.StrSlice1: ", GoSlice.StrSlice1)
 	fmt.Println("GoSlice.StrSlice2: ", GoSlice.StrSlice2)
 	GoSlice.TestAnySlice()
@@ -47,6 +47,18 @@ func main() {
 	delete(GoMap.AnyMap, "arr")
 	fmt.Println(GoMap.AnyMap, len(GoMap.AnyMap))*/
 
+	//GoPointer.IntPointerTest()
+	//GoPointer.ListPointerTest()
+	//GoPointer.PointFuncTest()
+
+	/*GoStruct.FirstTest()
+	GoStruct.SecondTest()
+	GoStruct.ThirdTest()
+	ref := GoStruct.FourthTest()
+	fmt.Println(*ref)
+	fmt.Println(GoStruct.MyStudent)
+
+	GoStruct.AnimalTest()*/
 }
 
 func printSomething() {
