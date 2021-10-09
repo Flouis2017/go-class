@@ -20,10 +20,10 @@ func IntPointerTest() {
 
 
 /**
- * 数组指针(*[]<type>)和指针数组([]*<type>)，两者不同，不要混淆了！
- * 加一个定于就比较好理解：数组指针 = 数组的指针，*ref之后是一个数组。
+ * 数组(切片)指针(*[]<type>)和指针数组(切片)([]*<type>)，两者不同，不要混淆了！
+ * 加一个定语就会比较好理解：数组指针 = 数组的指针，*ref之后是一个数组。
  * 而指针数组是一个存放指针的数组
- * 数组和切片同理，下面以切面做示例
+ * 数组和切片同理，下面以切片做示例
  */
 
 func ListPointerTest() {
@@ -40,18 +40,13 @@ func ListPointerTest() {
 	fmt.Println("================================")
 
 	var refSlice []*string
-	var str1 = "str1"
-	var str2 = "str2"
-	var str3 = "str3"
-	var str4 = "str4"
-	var str5 = "str5"
-	refSlice = append(refSlice, &str1)
-	refSlice = append(refSlice, &str2)
-	refSlice = append(refSlice, &str3)
-	refSlice = append(refSlice, &str4)
-	refSlice = append(refSlice, &str5)
-	for i := 0; i < len(refSlice); i++ {
-		fmt.Print(*refSlice[i], " & ")
+	l := len(list)
+	for i := 0; i < l; i++ {
+		refSlice = append(refSlice, &list[i])
+	}
+	ll := len(refSlice)
+	for i := 0; i < ll; i++ {
+		fmt.Print(*refSlice[i], "\t")
 	}
 }
 

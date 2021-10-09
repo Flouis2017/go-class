@@ -18,8 +18,8 @@ type Student struct {
 
 var MyStudent Student
 
+// FirstTest 类似于Java中使用默认无参构造方法创建对象，再使用setter方法初始化成员变量
 func FirstTest() {
-	// 类似与Java set初始化一个对象
 	var student Student
 	student.Name = "Flouis"
 	student.Age = 27
@@ -30,6 +30,7 @@ func FirstTest() {
 	fmt.Println(student)
 }
 
+// SecondTest 类似于Java中使用有参构造方法创建对象
 func SecondTest() {
 	student := Student{
 		Name: "Lily",
@@ -45,6 +46,7 @@ func ThirdTest() {
 	fmt.Println(student)
 }
 
+// FourthTest 使用new关键字创建对象
 func FourthTest() *Student {
 	student := new(Student)
 	student.Name = "Tom"
