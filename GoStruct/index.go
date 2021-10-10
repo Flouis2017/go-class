@@ -31,14 +31,14 @@ func FirstTest() {
 }
 
 // SecondTest 类似于Java中使用有参构造方法创建对象
-func SecondTest() {
+func SecondTest() Student {
 	student := Student{
 		Name: "Lily",
 		Age: 25,
 		Gender: "Female",
 		Hobbies: []string{"Singing", "Dancing"},
 	}
-	fmt.Println(student)
+	return student
 }
 
 func ThirdTest() {
@@ -46,7 +46,7 @@ func ThirdTest() {
 	fmt.Println(student)
 }
 
-// FourthTest 使用new关键字创建对象
+// FourthTest 使用new关键字创建对象，这时候需要注意返回的是一个指针
 func FourthTest() *Student {
 	student := new(Student)
 	student.Name = "Tom"
