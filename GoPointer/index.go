@@ -80,7 +80,7 @@ func change(p *string) {
 	*p = "Golang to be No.1"
 }
 
-// ListChange1 值传递能改变到原变量
+// ListChange1 值传递不能修改原变量
 func ListChange1(arg []string) {
 	arg = append(arg, "zzz")
 }
